@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  web_server:
+    build: .
+    container_name: veritabani-odev
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db_server
+  
+  db_server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql_db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=GucluBirSifre123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./database:/tmp/sql_scripts
