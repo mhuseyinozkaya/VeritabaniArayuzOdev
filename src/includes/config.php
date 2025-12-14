@@ -12,10 +12,10 @@ function redirect_location($page = "index.php")
 {
     return header("Location: $page");
 }
-function connect_database()
+
+function connect_database($databaseName = "test_PROJEODEV")
 {
     $serverName = "db_server";
-    $databaseName = "test_PROJEODEV";
     $uid = "sa";
     $pwd = "GucluBirSifre123!";
     try {

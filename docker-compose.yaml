@@ -5,6 +5,7 @@ services:
     container_name: veritabani-odev
     volumes:
       - ./src:/var/www/html
+      - ./database:/var/www/data
     ports:
       - "8080:80"
     depends_on:

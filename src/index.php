@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once "includes/config.php";
-require_once "includes/init.php";
 
 $urunler = [];
 $conn = connect_database();

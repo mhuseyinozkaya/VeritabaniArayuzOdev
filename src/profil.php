@@ -132,7 +132,7 @@ include_once "includes/header.php";
                                     
                                     // SİPARİŞ KALEMLERİNİ ÇEK
                                     $sqlKalem = "SELECT SK.Miktar, SK.BirimFiyat, U.UrunAdi, U.UrunID 
-                                                 FROM SIPARIS_KALEMI SK 
+                                                 FROM [dbo].[SIPARIS_KALEMI] SK 
                                                  JOIN URUN U ON SK.UrunID = U.UrunID 
                                                  WHERE SK.SiparisID = ?";
                                     $stmtKalem = $conn->prepare($sqlKalem);
