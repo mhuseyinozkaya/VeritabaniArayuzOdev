@@ -1,7 +1,7 @@
 # Kurulum
 
 ```bash
-docker compose -d --build
+docker compose up -d --build
 ```
 Komutu ile Docker container build edildikten sonra
 web sunucusu ve mssql veritabanı sunucusu için iki ayrı container oluşacak.
